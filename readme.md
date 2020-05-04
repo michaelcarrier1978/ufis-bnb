@@ -45,6 +45,7 @@ We will use this project as a way to analyze your frontend, backend, and databas
 * Commit frequently! We are as interested in your workflow as your result. Make sure to include good commit messages.
 * If you have more time and would like to show off, feel free to add more to your implementation (e.g. allowing current users to add reviews to properties, more sorting/filtering capabilities, descriptions/images for the properties, a fancy UI, etc.)
 * Feel free to use internet resources to help you implement your solutions, but make sure all code is your own. We want to see how you are able to find and utilize available resources.
+* External libraries and packages are allowed. Let us know in your submission email if you used any additional libraries/packages and if there are special instructions to compile and run your code.
 * You may spend a **maximum of 8 hours** (not including time spent for setup) on this! If you have not completed the tasks by the end of the 8 hours, submit what you have.
 
 
