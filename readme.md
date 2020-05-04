@@ -55,4 +55,4 @@ When you have finished, email us a link to your public repository on GitHub or B
 * If you had days instead of hours to implement this, how would you improve your solution?
 * Do you have any enhancements that you want to suggest, or pre-emptively implement?
  
-###### If you haven't set up a public repo, send us a `.zip` of your working copy. ######
+###### If you haven't set up a public repo, send us a `.zip` of your working copy, complete with the `.git` directory. ######
