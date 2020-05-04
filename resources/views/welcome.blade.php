@@ -32,17 +32,28 @@
                 font-size: 84px;
                 padding-top: 5rem;
             }
+
+            .links > a {
+                color: #636b6f;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: block;
+                margin: 5px 0px;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="full-height">
             <div class="content">
                 <div class="title m-b-md">
                     Welcome to UFIS-BNB!
                 </div>
-                <div>
+                <div class="links">
                     @foreach($properties as $property)
-                    <p>{{ $property->title }}</p>
+                    <a href="">{{ $property->title }}</a>
                     @endforeach
                 </div>
             </div>
