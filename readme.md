@@ -11,11 +11,11 @@ We will use this project as a way to analyze your frontend, backend, and databas
 ## Tasks ##
 
 * [x] Display all properties from the `Property` table on the homepage as links (this was done for you) 
-* [ ] Assign types to the properties
-     * [ ] Properties with IDs 1 and 2 should have type: "House"
-     * [ ] Properties with IDS 3 and 4 should have type: "Apartment"
-     * [ ] Property with ID 5 should have type: "Cabin"
-* [ ] Create fake reviews for some (or all) of the properties. Reviews should include a numeric rating from 1-5 (required) as well as a comment (optional). **HINT: Is a new table needed for this?**
+* [ ] Assign types to the properties  **HINT: Is a new table needed for this?**
+     * [ ] Properties with `property_id` 1 and 2 should have type: "House"
+     * [ ] Properties with `property_id` 3 and 4 should have type: "Apartment"
+     * [ ] Property with `property_id` 5 should have type: "Cabin"
+* [ ] Create fake reviews for some (or all) of the properties. Reviews should include a numeric rating from 1-5 (required) as well as a comment (optional).
 * [ ] Route each link from the homepage to a separate page containing details for each of the properties. The property pages should include: the title of the property, its type, and its reviews.
 * [ ] Allow users to filter all properties on the homepage by type.
 * [ ] Allow users to sort all properties on the homepage by average rating.
