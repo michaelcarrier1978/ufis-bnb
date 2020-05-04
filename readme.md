@@ -51,6 +51,7 @@ We will use this project as a way to analyze your frontend, backend, and databas
 
 ## Submission ##
 When you have finished, email us a link to your public repository on GitHub or Bitbucket. Also, in the email, send us a short analysis answering these questions:
+
 * If you had days instead of hours to implement this, how would you improve your solution?
 * Do you have any enhancements that you want to suggest, or pre-emptively implement?
  
