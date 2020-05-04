@@ -23,7 +23,7 @@ We will use this project as a way to analyze your frontend, backend, and databas
 ## Setup ##
 
 #### Homestead Setup ####
-* It is highly recommended that you use [Homestead](https://laravel.com/docs/7.x/homestead) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://undeededpart.htmlpasta.com/) for MacOS and Windows). This will ensure that your local environment has the required packages and dependencies.
+* It is highly recommended that you use [Homestead](https://laravel.com/docs/7.x/homestead) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://nattierfight.htmlpasta.com/) for MacOS and Windows). This will ensure that your local environment has the required packages and dependencies.
 * In your `Homestead.yaml` file, be sure to map a folder to the parent folder that contains the ufis-bnb folder, and map your site to the public folder of ufis-bnb. For example, if you cloned the ufis-bnb repo into a folder named `code` located at `~/code` path, your Homestead.yaml would want to include this:
     * ![Example](/homestead_yaml.png) 
          * Make sure that the string you map your site to (`homestead.test`, in this example) has been added to your hosts file.
