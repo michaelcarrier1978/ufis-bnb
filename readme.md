@@ -27,8 +27,7 @@ We will use this project as a way to analyze your frontend, backend, and databas
 * In your `Homestead.yaml` file, be sure to map a folder to the parent folder that contains the ufis-bnb folder, and map your site to the public folder of ufis-bnb. For example, if you cloned the ufis-bnb repo into a folder named `code` located at `~/code` path, your Homestead.yaml would want to include this:
     * ![Example](/homestead_yaml.png) 
          * Make sure that the string you map your site to (`homestead.test`, in this example) has been added to your hosts file.
-* Remember to run `composer install` in the `ufis-bnb` folder
-* After you are set-up, run `vagrant up` and `vagrant ssh` from your Homestead folder. Then run `php artisan migrate:fresh --seed` from inside the Vagrant VM after navigating into the `code/ufis-bnb` directory from the Vagrant virtual machine. 
+* After you are set-up, run `vagrant up` and `vagrant ssh` from your Homestead folder. Then, navigate to the `~/code/ufis-bnb` folder and run `composer install` and `php artisan migrate:fresh --seed` from inside the Vagrant VM command line. 
 * You should then be able to navigate to your site (`homestead.test` in our example) in your browser to see the homepage of the skeleton app we have provided.
                                                                                                
    
