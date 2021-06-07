@@ -4,7 +4,7 @@
 
 ## Overview ##
 
-The objective of this project is to create the beginnings of a basic property rental web application (think [Airbnb](www.airbnb.com)). We have provided you with a skeleton Laravel application and some dummy rental property records. Your goal is to complete the tasks from the tasklist below. 
+The objective of this project is to create the beginnings of a basic property rental web application (think [Airbnb](https://www.airbnb.com)). We have provided you with a skeleton Laravel application and some dummy rental property records. Your goal is to complete the tasks from the tasklist below. 
 
 We will use this project as a way to analyze your frontend, backend, and database skills. 
 
@@ -23,7 +23,7 @@ We will use this project as a way to analyze your frontend, backend, and databas
 ## Setup ##
 
 #### Homestead Setup ####
-* It is highly recommended that you use [Homestead](https://laravel.com/docs/7.x/homestead) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://aneuploidroad.htmlpasta.com/) for MacOS and Windows). This will ensure that your local environment has the required packages and dependencies.
+* It is highly recommended that you use [Homestead](https://laravel.com/docs/7.x/homestead) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://nguyenmichelle.github.io/) for MacOS and Windows). This will ensure that your local environment has the required packages and dependencies.
 * In your `Homestead.yaml` file, be sure to map a folder to the parent folder that contains the ufis-bnb folder, and map your site to the public folder of ufis-bnb. For example, if you cloned the ufis-bnb repo into a folder named `code` located at `~/code` path, your Homestead.yaml would want to include this:
     * ![Example](/homestead_yaml.png) 
          * Make sure that the string you map your site to (`homestead.test`, in this example) has been added to your hosts file.
