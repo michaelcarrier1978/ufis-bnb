@@ -14,7 +14,8 @@ class AddPropertyTypeToPropertyTable extends Migration
     public function up()
     {
         Schema::table('property', function (Blueprint $table) {
-            $table->string('type')->after('title');
+            $table->integer('type_id')->unsigned()->after('title');
+            $table->foreign('type_id')->references('id')->on('type')->onDelete('cascade');
         });
     }
 
@@ -26,7 +27,7 @@ class AddPropertyTypeToPropertyTable extends Migration
     public function down()
     {
         Schema::table('property', function (Blueprint $table) {
-            $table->dropColumn('type');
+            $table->dropColumn('type_id');
         });
     }
 }
