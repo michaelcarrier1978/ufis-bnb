@@ -14,7 +14,7 @@ class AddPropertyTypeToPropertyTable extends Migration
     public function up()
     {
         Schema::table('property', function (Blueprint $table) {
-            //
+            $table->string('type')->after('title');
         });
     }
 
@@ -26,7 +26,7 @@ class AddPropertyTypeToPropertyTable extends Migration
     public function down()
     {
         Schema::table('property', function (Blueprint $table) {
-            //
+            $table->dropColumn('type');
         });
     }
 }
