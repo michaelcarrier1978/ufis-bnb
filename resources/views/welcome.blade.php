@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -53,6 +53,7 @@
                 </div>
 
                 <div class="filter">
+                    <h2>Filter properties</h2>
                     <a href="#" data-filter="all" class="btn">All</a>
                     @foreach ($types as $type)
                     <a href="#" data-filter="type-{{$type->id}}" class="btn">{{ucFirst($type->name)}}</a>
@@ -64,6 +65,25 @@
                         <div class="links">                    
                             <a href="{{$property->property_id}}">{{ $property->title }}</a>                    
                         </div>
+                        <?php 
+                            $rating = 0; 
+                            $ratingCount = 0;
+                        ?>
+                        @foreach ($property->review as $reviews)
+                        <?php                         
+                            $rating+= $reviews->rating; 
+                            $ratingCount++;
+                        ?>
+                        @endforeach
+                        <?php 
+                            $avgRating = $rating/$ratingCount;
+                        ?>
+                        @if ($rating > 1)
+                            <div class="avgRating rating-<?php echo $avgRating ?>">Average Rating <?php echo $avgRating; ?></div>
+                        @else
+                            <div class="avgRating">No ratings</div>
+                        @endif
+
                     </div>
                     @endforeach
                 </div>

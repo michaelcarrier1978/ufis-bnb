@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Property extends Model
 {
     protected $table = 'property';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'property_id';
 
     public function review()
     {

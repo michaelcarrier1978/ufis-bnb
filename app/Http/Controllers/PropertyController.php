@@ -12,7 +12,8 @@ class PropertyController extends Controller
     public function index() 
     {
         $types = Type::all();
-        $properties = Property::all();
+        $properties = Property::with('review')->get();
+        
         return view('welcome', compact('types', 'properties'));
     }
 
