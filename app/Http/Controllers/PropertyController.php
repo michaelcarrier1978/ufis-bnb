@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Property;
+Use App\Review;
 
 class PropertyController extends Controller
 {
@@ -17,6 +18,6 @@ class PropertyController extends Controller
         $review = Review::where('property_id', $id)->get();
         $property = Property::where('property_id', $id)->get();
         
-        return view('property.show', compact('review', 'property'));
+        return view('show', compact('review', 'property'));
     }
 }

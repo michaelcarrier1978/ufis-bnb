@@ -53,7 +53,7 @@
                 </div>
                 <div class="links">
                     @foreach($properties as $property)
-                    <a href="">{{ $property->title }}</a>
+                    <a href="{{$property->property_id}}">{{ $property->title }}</a>
                     @endforeach
                 </div>
             </div>
