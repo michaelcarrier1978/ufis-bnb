@@ -13,4 +13,9 @@ class Property extends Model
     {
         return $this->hasMany('App\Review', 'property_id');
     }
+
+    public function type()
+    {
+        return $this->belongTo('App\Type');
+    }
 }
