@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Property;
 Use App\Review;
+use App\Type;
 
 class PropertyController extends Controller
 {
-    public function index() {
+    public function index() 
+    {
+        $types = Type::all();
         $properties = Property::all();
-        return view('welcome')->with('properties', $properties);
+        return view('welcome', compact('types', 'properties'));
     }
 
     public function show($id)

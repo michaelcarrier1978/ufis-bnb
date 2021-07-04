@@ -51,12 +51,49 @@
                 <div class="title m-b-md">
                     Welcome to UFIS-BNB!
                 </div>
-                <div class="links">
+
+                <div class="filter">
+                    <a href="#" data-filter="all" class="btn">All</a>
+                    @foreach ($types as $type)
+                    <a href="#" data-filter="type-{{$type->id}}" class="btn">{{ucFirst($type->name)}}</a>
+                    @endforeach
+                </div>
+                <div class="properties">
                     @foreach($properties as $property)
-                    <a href="{{$property->property_id}}">{{ $property->title }}</a>
+                    <div class="property type-{{$property->type_id}}">
+                        <div class="links">                    
+                            <a href="{{$property->property_id}}">{{ $property->title }}</a>                    
+                        </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            let btns = document.querySelectorAll(".btn");
+            let properties = document.querySelectorAll(".property");
+
+            for (let i = 0; i < btns.length; i++) {
+
+                btns[i].addEventListener('click', (e) => {
+                    e.preventDefault()
+                    
+                    let filter = e.target.dataset.filter;
+
+                    properties.forEach((property) => {
+                        if (filter === "all") {
+                            property.style.display = "block";
+                        } else {
+                            if (property.classList.contains(filter)) {
+                                property.style.display = "block";
+                            } else {
+                                property.style.display = "none";
+                            }   
+                        }
+                    })
+                    
+                });
+            };
+        </script>    
     </body>
 </html>
