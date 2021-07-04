@@ -11,4 +11,12 @@ class PropertyController extends Controller
         $properties = Property::all();
         return view('welcome')->with('properties', $properties);
     }
+
+    public function show($id)
+    {
+        $review = Review::where('property_id', $id)->get();
+        $property = Property::where('property_id', $id)->get();
+        
+        return view('property.show', compact('review', 'property'));
+    }
 }

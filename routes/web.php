@@ -14,3 +14,4 @@ use App\Property;
 */
 
 Route::get('/', 'PropertyController@index');
+Route::get('/{id}', 'PropertyController@show');
