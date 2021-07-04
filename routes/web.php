@@ -13,7 +13,4 @@ use App\Property;
 |
 */
 
-Route::get('/', function () {
-    $properties = Property::all();
-    return view('welcome')->with('properties', $properties);
-});
+Route::get('/', 'PropertyController@index');
