@@ -59,6 +59,15 @@
                     <a href="#" data-filter="type-{{$type->id}}" class="btn">{{ucFirst($type->name)}}</a>
                     @endforeach
                 </div>
+
+                <div class="sort">
+                    <select class="rating-sort">
+                        <option value="default">Sort by rating</option>
+                        <option value="highest">Highes rated</option>
+                        <option value="lowest">Lowest rated</option>
+                    </select>
+                </div>
+
                 <div class="properties">
                     @foreach($properties as $property)
                     <div class="property type-{{$property->type_id}}">
@@ -114,6 +123,36 @@
                     
                 });
             };
+
+            $('.rating-sort').change(function() {
+                var selected_value = $(".rating-sort :selected").val();
+                if (selected_value === 'highest') {
+                    highestRatingSort();
+                }
+                if (selected_value === 'lowest') {
+                    lowestRatingSort();
+                }
+            });
+
+            function highestRatingSort() {
+                $('.property').sort(function(a, b) {
+                if (a.textContent > b.textContent) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+                }).appendTo('.properties');
+            }
+
+            function lowestRatingSort() {
+                $('.property').sort(function(a, b) {
+                if (a.textContent < b.textContent) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+                }).appendTo('.properties');
+            }
         </script>    
     </body>
 </html>
