@@ -13,7 +13,7 @@ class PropertyController extends Controller
     {
         $types = Type::all();
         $properties = Property::with('review')->get();
-        
+
         return view('welcome', compact('types', 'properties'));
     }
 
@@ -21,7 +21,8 @@ class PropertyController extends Controller
     {
         $review = Review::where('property_id', $id)->get();
         $property = Property::where('property_id', $id)->get();
+        $popType = Property::with('type')->get();
         
-        return view('show', compact('review', 'property'));
+        return view('show', compact('review', 'property', 'type'));
     }
 }

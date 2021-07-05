@@ -16,6 +16,6 @@ class Property extends Model
 
     public function type()
     {
-        return $this->belongTo('App\Type');
+        return $this->hasMany('App\Type', 'id');
     }
 }

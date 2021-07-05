@@ -11,6 +11,6 @@ class Type extends Model
 
     public function property()
     {
-        return $this->hasMany('App\Property');
+        return $this->belongsTo('App\Property');
     }
 }

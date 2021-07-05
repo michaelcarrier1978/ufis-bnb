@@ -1,7 +1,10 @@
 @foreach ($property as $properties)
     {{$properties->title}}
-    {{$properties->type}}
+    @foreach ($properties->type as $propType)
+        {{$propType->name}}
+    @endforeach
 @endforeach
+
 
 @foreach ($review as $reviews)
     {{$reviews->comment}}

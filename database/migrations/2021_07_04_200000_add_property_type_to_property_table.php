@@ -15,7 +15,6 @@ class AddPropertyTypeToPropertyTable extends Migration
     {
         Schema::table('property', function (Blueprint $table) {
             $table->integer('type_id')->unsigned()->after('title');
-            $table->foreign('type_id')->references('id')->on('type')->onDelete('cascade');
         });
     }
 
