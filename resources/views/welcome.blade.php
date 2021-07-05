@@ -18,7 +18,7 @@
                 <div class="sort">
                     <select class="rating-sort">
                         <option value="default">Sort by rating</option>
-                        <option value="highest">Highes rated</option>
+                        <option value="highest">Highest rated</option>
                         <option value="lowest">Lowest rated</option>
                     </select>
                 </div>
@@ -43,7 +43,7 @@
                             $avgRating = $rating/$ratingCount;
                         ?>
                         @if ($rating > 1)
-                            <div class="avgRating rating-<?php echo $avgRating ?>">Average Rating <?php echo $avgRating; ?></div>
+                            <div class="avgRating rating-<?php echo $avgRating ?>">Average Rating <?php echo $avgRating; ?> out of 5</div>
                         @else
                             <div class="avgRating">No ratings</div>
                         @endif
